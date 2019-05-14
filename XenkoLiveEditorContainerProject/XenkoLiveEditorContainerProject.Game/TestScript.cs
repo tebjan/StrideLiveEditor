@@ -1,5 +1,5 @@
-﻿using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Xenko.Engine;
+using Xenko.Core.Mathematics;
+using Xenko.Engine;
 
 namespace XenkoLiveEditorContainerProject
 {

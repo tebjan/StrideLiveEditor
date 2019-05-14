@@ -1,8 +1,8 @@
-﻿using System;
-using SiliconStudio.Core;
-using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Xenko.Engine;
-using SiliconStudio.Xenko.Input;
+using System;
+using Xenko.Core;
+using Xenko.Core.Mathematics;
+using Xenko.Engine;
+using Xenko.Input;
 
 namespace XenkoLiveEditorContainerProject
 {
@@ -44,8 +44,8 @@ namespace XenkoLiveEditorContainerProject
             // Configure touch input
             if (!Platform.IsWindowsDesktop)
             {
-                Input.ActivatedGestures.Add(new GestureConfigDrag());
-                Input.ActivatedGestures.Add(new GestureConfigComposite());
+                Input.Gestures.Add(new GestureConfigDrag());
+                Input.Gestures.Add(new GestureConfigComposite());
             }
         }
 

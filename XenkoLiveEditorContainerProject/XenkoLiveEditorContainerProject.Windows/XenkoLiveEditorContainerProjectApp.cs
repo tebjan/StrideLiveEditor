@@ -1,25 +1,14 @@
-using SiliconStudio.Xenko.Engine;
-using System;
-using XenkoLiveEditor;
+using Xenko.Engine;
 
 namespace XenkoLiveEditorContainerProject
 {
     class XenkoLiveEditorContainerProjectApp
     {
-        [STAThread]
         static void Main(string[] args)
         {
             using (var game = new Game())
             {
-#if DEBUG
-                var window = new LiveEditorMainWindow(game);
-                window.Show();
-#endif
                 game.Run();
-#if DEBUG
-                if (window != null)
-                    window.Close();
-#endif
             }
         }
     }
