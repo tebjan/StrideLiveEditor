@@ -1,10 +1,15 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras/2.0.24">
   <PropertyGroup>
-    <TargetFrameworks>net472</TargetFrameworks>
+    <TargetFramework>net472</TargetFramework>
     <RootNamespace>XenkoLiveEditor</RootNamespace>
     <AssemblyName>XenkoLiveEditor</AssemblyName>
+    <PackageId>$(AssemblyName)</PackageId>
+    <Description>$(AssemblyName)</Description>
   </PropertyGroup>
-
+  <ItemGroup>
+    <None Include="..\*.vl" Pack="true" TargetPath="." />
+    <None Include="..\Demos\*.vl" Pack="true" PackagePath="Demos\%(RecursiveDir)%(Filename)%(Extension)" />
+  </ItemGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -25,6 +30,14 @@
 
   <ItemGroup>
     <PackageReference Include="MahApps.Metro" Version="1.6.5" />
+    <PackageReference Include="Nerdbank.GitVersioning" Version="2.3.38">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.5-dev.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Xenko.Engine" Version="3.1.0.1-beta02-0550" />
   </ItemGroup>
 </Project>
