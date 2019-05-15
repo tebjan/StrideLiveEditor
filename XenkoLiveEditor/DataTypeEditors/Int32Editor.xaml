@@ -13,6 +13,6 @@
             <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
         <TextBlock x:Name="PropertyName" Text="" Grid.Column="0" VerticalAlignment="Center" />
-        <Controls:NumericUpDown x:Name="Value" Grid.Column="1" HasDecimals="False" Speedup="True" Interval="1" />
+        <Controls:NumericUpDown x:Name="Value" Grid.Column="1" NumericInputMode="Numbers" Speedup="True" Interval="1" />
     </Grid>
 </base:BaseEditor>

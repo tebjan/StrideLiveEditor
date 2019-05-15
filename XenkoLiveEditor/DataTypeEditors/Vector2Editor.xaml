@@ -21,9 +21,9 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <TextBlock Text="X:" VerticalAlignment="Center" Grid.Column="0"/>
-            <Controls:NumericUpDown x:Name="X" Grid.Column="1" HasDecimals="True" Speedup="True" Interval="0.1" Margin="5" />
+            <Controls:NumericUpDown x:Name="X" Grid.Column="1" NumericInputMode="Decimal" Speedup="True" Interval="0.1" Margin="5" />
             <TextBlock Text="Y:" VerticalAlignment="Center" Grid.Column="2"/>
-            <Controls:NumericUpDown x:Name="Y" Grid.Column="3" HasDecimals="True" Speedup="True" Interval="0.1" Margin="5" />
+            <Controls:NumericUpDown x:Name="Y" Grid.Column="3" NumericInputMode="Decimal" Speedup="True" Interval="0.1" Margin="5" />
         </Grid>
     </Grid>
 </base:BaseEditor>

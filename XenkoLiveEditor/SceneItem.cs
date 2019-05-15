@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using SiliconStudio.Xenko.Engine;
+using Xenko.Engine;
 
 namespace XenkoLiveEditor
 {

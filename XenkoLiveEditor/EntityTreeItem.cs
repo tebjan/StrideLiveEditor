@@ -1,5 +1,5 @@
-﻿using SiliconStudio.Core;
-using SiliconStudio.Xenko.Engine;
+﻿using Xenko.Core;
+using Xenko.Engine;
 using System.Collections.ObjectModel;
 using System.Linq;
 

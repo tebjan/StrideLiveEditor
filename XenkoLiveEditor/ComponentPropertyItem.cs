@@ -6,8 +6,8 @@ namespace XenkoLiveEditor
 {
     public class ComponentPropertyItem
     {
-        public SiliconStudio.Core.DataMemberAttribute DataMember { get; set; }
-        public SiliconStudio.Core.DisplayAttribute Display { get; set; }
+        public Xenko.Core.DataMemberAttribute DataMember { get; set; }
+        public Xenko.Core.DisplayAttribute Display { get; set; }
         
         public FieldInfo FieldInfo { get; set; }
         public PropertyInfo PropertyInfo { get; set; }
@@ -78,8 +78,8 @@ namespace XenkoLiveEditor
             PropertyInfo = propertyInfo;
 
             var member = MemberInfo;
-            DataMember = member.GetCustomAttribute<SiliconStudio.Core.DataMemberAttribute>();
-            Display = member.GetCustomAttribute<SiliconStudio.Core.DisplayAttribute>();
+            DataMember = member.GetCustomAttribute<Xenko.Core.DataMemberAttribute>();
+            Display = member.GetCustomAttribute<Xenko.Core.DisplayAttribute>();
         }
 
         public ComponentPropertyItem(FieldInfo fieldInfo)

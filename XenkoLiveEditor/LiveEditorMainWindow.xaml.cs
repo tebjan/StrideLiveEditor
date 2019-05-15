@@ -1,5 +1,5 @@
 ﻿using MahApps.Metro.Controls;
-using SiliconStudio.Xenko.Engine;
+using Xenko.Engine;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -113,7 +113,7 @@ namespace XenkoLiveEditor
             Log("Scene changed");
         }
 
-        private void SceneInstance_ComponentChanged(object sender, SiliconStudio.Xenko.Engine.Design.EntityComponentEventArgs e)
+        private void SceneInstance_ComponentChanged(object sender, Xenko.Engine.Design.EntityComponentEventArgs e)
         {
             if (selectedEntity == null || e.Entity != selectedEntity.Entity)
                 return;
@@ -147,7 +147,7 @@ namespace XenkoLiveEditor
 
         }
 
-        private void Children_CollectionChanged(object sender, SiliconStudio.Core.Collections.TrackingCollectionChangedEventArgs e)
+        private void Children_CollectionChanged(object sender, Xenko.Core.Collections.TrackingCollectionChangedEventArgs e)
         {
             switch (e.Action)
             {
@@ -175,7 +175,7 @@ namespace XenkoLiveEditor
                             foreach (var s in scene.Children)
                             {
                                 Children_CollectionChanged(null,
-                                    new SiliconStudio.Core.Collections.TrackingCollectionChangedEventArgs(
+                                    new Xenko.Core.Collections.TrackingCollectionChangedEventArgs(
                                     System.Collections.Specialized.NotifyCollectionChangedAction.Add, s, null, 0, false)
                                     );
                             }
@@ -373,7 +373,7 @@ namespace XenkoLiveEditor
             foreach (var s in sceneInstance.RootScene.Children)
             {
                 Children_CollectionChanged(null,
-                    new SiliconStudio.Core.Collections.TrackingCollectionChangedEventArgs(
+                    new Xenko.Core.Collections.TrackingCollectionChangedEventArgs(
                     System.Collections.Specialized.NotifyCollectionChangedAction.Add, s, null, 0, false)
                     );
             }
@@ -438,11 +438,11 @@ namespace XenkoLiveEditor
                 return new DataTypeEditors.SingleEditor(component, property);
             else if (type == typeof(bool))
                 return new DataTypeEditors.BooleanEditor(component, property);
-            else if (type == typeof(SiliconStudio.Core.Mathematics.Vector3))
+            else if (type == typeof(Xenko.Core.Mathematics.Vector3))
                 return new DataTypeEditors.Vector3Editor(component, property);
-            else if (type == typeof(SiliconStudio.Core.Mathematics.Vector2))
+            else if (type == typeof(Xenko.Core.Mathematics.Vector2))
                 return new DataTypeEditors.Vector2Editor(component, property);
-            else if (type == typeof(SiliconStudio.Core.Mathematics.Quaternion))
+            else if (type == typeof(Xenko.Core.Mathematics.Quaternion))
             {
                 if (component.GetType().Name == "TransformComponent" && property.Name == "Rotation")
                     return new DataTypeEditors.RotationEditor(component, property);

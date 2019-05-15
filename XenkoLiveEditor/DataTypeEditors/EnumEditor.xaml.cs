@@ -1,4 +1,4 @@
-﻿using SiliconStudio.Xenko.Engine;
+﻿using Xenko.Engine;
 using System;
 using System.Collections.Generic;
 using System.Windows.Controls;
