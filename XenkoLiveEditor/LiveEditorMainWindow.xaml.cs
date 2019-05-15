@@ -329,7 +329,7 @@ namespace XenkoLiveEditor
 
         private void Log(LogLevel logLevel, string message)
         {
-            var color = Colors.Black;
+            var color = Colors.Gray;
             var fontWeight = FontWeights.Normal;
             var fontStyle = FontStyles.Normal;
 
@@ -341,7 +341,7 @@ namespace XenkoLiveEditor
                 case LogLevel.Info:
                     break;
                 case LogLevel.Warn:
-                    color = Colors.Navy;
+                    color = Colors.Yellow;
                     fontWeight = FontWeights.Bold;
                     break;
                 case LogLevel.Error:
