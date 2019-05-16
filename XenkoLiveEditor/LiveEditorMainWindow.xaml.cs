@@ -43,8 +43,6 @@ namespace XenkoLiveEditor
 
             Task.Factory.StartNew(GetSceneInstance);
             Task.Factory.StartNew(UpdateComponentValuesTicker);
-
-            Closing += MainWindow_Closing;
         }
 
         #region Setup Xenko Bindings
@@ -210,12 +208,6 @@ namespace XenkoLiveEditor
         #endregion Xenko Event Handlers
 
         #region UI Events
-
-        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            if (game != null)
-                game.Exit();
-        }
 
         private void entityTreeView_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
