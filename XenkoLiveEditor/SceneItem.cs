@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using Xenko.Engine;
 
 namespace XenkoLiveEditor
@@ -24,15 +25,21 @@ namespace XenkoLiveEditor
 
             if (entity.Transform.Parent != null)
             {
-                var result = FindEntityInTree(Entities, entity.GetParent());
-                if (result == null)
-                    Entities.Add(treeItem);
-                else
-                    result.Children.Add(treeItem);
+                var parentEntity = entity.GetParent();
+                var parent = FindEntityInTree(Entities, parentEntity);
+                if (parent == null)
+                    OnEntityAdded(parentEntity); //add non existent parent(s)
+
+                //add child to now exiting parent
+                parent = FindEntityInTree(Entities, parentEntity);
+                if(!parent.Children.Any(ti => ti.Entity == entity))
+                    parent.Children.Add(treeItem);
             }
             else
             {
-                Entities.Add(treeItem);
+
+                if (!Entities.Any(ti => ti.Entity == entity))
+                    Entities.Add(treeItem);
             }
         }
 
