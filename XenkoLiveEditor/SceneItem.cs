@@ -16,9 +16,7 @@ namespace XenkoLiveEditor
             TreeRoot = sceneRoot;
 
             this.scene = (Scene)sceneRoot.Entity;
-
         }
-
 
         public void OnEntityAdded(Entity entity)
         {
@@ -38,14 +36,13 @@ namespace XenkoLiveEditor
             }
         }
 
-
         public void OnEntityRemoved(Entity entity)
         {
+            var result = FindEntityInTree(Entities, entity);
+            var parent = FindEntityInTree(Entities, entity.GetParent());
 
-            var result = FindEntityInTree(Entities, entity.GetParent());
-
-            if (result != null)
-                result.Children.Remove(result);
+            if (result != null && parent != null)
+                parent.Children.Remove(result);
             else
             {
                 Entities.Remove(FindEntityInTree(Entities, entity));
