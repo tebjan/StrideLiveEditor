@@ -8,7 +8,7 @@ namespace XenkoLiveEditor
 {
     public class EntityTreeItem
     {
-        public string Name { get { return Entity.Name; } }
+        public string Name => Entity.Name;
 
 
         public ComponentBase Entity { get; set; }

@@ -22,12 +22,11 @@ namespace XenkoLiveEditor
 
         public void OnEntityAdded(Entity entity)
         {
-
             var treeItem = new EntityTreeItem(entity);
 
             if (entity.Transform.Parent != null)
             {
-                var result = FindEntityInTree(Entities, entity.Transform.Parent.Entity);
+                var result = FindEntityInTree(Entities, entity.GetParent());
                 if (result == null)
                     Entities.Add(treeItem);
                 else
@@ -43,13 +42,17 @@ namespace XenkoLiveEditor
         public void OnEntityRemoved(Entity entity)
         {
 
-            var result = FindEntityInTree(Entities, entity);
+            var result = FindEntityInTree(Entities, entity.GetParent());
 
             if (result != null)
-                Entities.Remove(result);
+                result.Children.Remove(result);
+            else
+            {
+                Entities.Remove(FindEntityInTree(Entities, entity));
+            }
         }
 
-        private EntityTreeItem FindEntityInTree(IEnumerable<EntityTreeItem> collection, Entity entity)
+        private static EntityTreeItem FindEntityInTree(IEnumerable<EntityTreeItem> collection, Entity entity)
         {
             foreach (var e in collection)
             {

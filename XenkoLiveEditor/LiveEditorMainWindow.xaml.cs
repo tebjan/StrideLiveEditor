@@ -186,7 +186,7 @@ namespace XenkoLiveEditor
                     //Bit of task trickery here as the this even fires well before actual unloading
                     var t = Task.Factory.StartNew(() =>
                     {
-                        Task.Delay(200).Wait(); //TODO: 200 is totally a magic number here
+                        Task.Delay(500).Wait(); //TODO: 500 is totally a magic number here
                         BuildTree();
                     },
                         CancellationToken.None,

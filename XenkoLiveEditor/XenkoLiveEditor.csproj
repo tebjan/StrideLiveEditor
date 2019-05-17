@@ -6,6 +6,9 @@
     <PackageId>$(AssemblyName)</PackageId>
     <Description>$(AssemblyName)</Description>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
   <ItemGroup>
     <None Include="..\*.vl" Pack="true" TargetPath="." />
     <None Include="..\Demos\*.vl" Pack="true" PackagePath="Demos\%(RecursiveDir)%(Filename)%(Extension)" />
