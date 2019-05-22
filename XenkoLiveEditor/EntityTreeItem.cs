@@ -2,14 +2,15 @@
 using Xenko.Engine;
 using System.Collections.ObjectModel;
 using System.Linq;
-
+using System.ComponentModel;
 
 namespace XenkoLiveEditor
 {
-    public class EntityTreeItem
+    public class EntityTreeItem : INotifyPropertyChanged
     {
-        public string Name => Entity.Name;
 
+        string currentName;
+        public string Name => currentName;
 
         public ComponentBase Entity { get; set; }
 
@@ -20,6 +21,7 @@ namespace XenkoLiveEditor
         public EntityTreeItem(ComponentBase entity)
         {
             Entity = entity;
+            currentName = entity.Name;
 
             if (entity.GetType() == typeof(Entity))
             {
@@ -35,5 +37,16 @@ namespace XenkoLiveEditor
                 Children = new ObservableCollection<EntityTreeItem>();
             }
         }
+
+        public void RefreshProperties()
+        {
+            if (Entity.Name != currentName)
+            {
+                currentName = Entity.Name;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Name"));
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

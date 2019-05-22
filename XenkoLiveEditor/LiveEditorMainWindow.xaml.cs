@@ -43,6 +43,7 @@ namespace XenkoLiveEditor
 
             Task.Factory.StartNew(GetSceneInstance);
             Task.Factory.StartNew(UpdateComponentValuesTicker);
+            Task.Factory.StartNew(UpdateComponentValuesTicker);
         }
 
         #region Setup Xenko Bindings
@@ -406,7 +407,27 @@ namespace XenkoLiveEditor
             }
         }
 
+        private async void UpdateNamesTicker()
+        {
+            while (true)
+            {
+                await Task.Delay(500);
 
+                if (sceneInstance == null)
+                    continue;
+
+                Dispatcher.Invoke(() => UpdateTreeNames(Entities));
+            }
+        }
+
+        private void UpdateTreeNames(IEnumerable<EntityTreeItem> items)
+        {
+            foreach (var item in items)
+            {
+                item.RefreshProperties();
+                UpdateTreeNames(item.Children);
+            }
+        }
 
         public SceneItem FindSceneInTree(IEnumerable<SceneItem> collection, Scene scene)
         {
