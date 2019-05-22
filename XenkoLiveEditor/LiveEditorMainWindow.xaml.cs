@@ -43,7 +43,7 @@ namespace XenkoLiveEditor
 
             Task.Factory.StartNew(GetSceneInstance);
             Task.Factory.StartNew(UpdateComponentValuesTicker);
-            Task.Factory.StartNew(UpdateComponentValuesTicker);
+            Task.Factory.StartNew(UpdateNamesTicker);
         }
 
         #region Setup Xenko Bindings
