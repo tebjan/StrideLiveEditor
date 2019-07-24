@@ -37,6 +37,6 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Xenko.Engine" Version="3.1.0.1-beta02-0627" />
+    <PackageReference Include="Xenko.Engine" Version="3.1.0.1-beta02-0635" />
   </ItemGroup>
 </Project>
