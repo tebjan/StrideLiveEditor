@@ -29,7 +29,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MahApps.Metro" Version="1.6.5" />
-    <PackageReference Include="Nerdbank.GitVersioning" Version="2.3.38">
+    <PackageReference Include="Nerdbank.GitVersioning" Version="2.3.186">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
