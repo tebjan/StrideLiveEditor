@@ -1,7 +1,7 @@
-﻿using Xenko.Engine;
+using Stride.Engine;
 using System.Windows.Controls;
 
-namespace XenkoLiveEditor.DataTypeEditors
+namespace StrideLiveEditor.DataTypeEditors
 {
     public partial class Int32Editor : BaseEditor
     {

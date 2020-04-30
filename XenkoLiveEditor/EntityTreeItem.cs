@@ -1,10 +1,10 @@
-﻿using Xenko.Core;
-using Xenko.Engine;
+using Stride.Core;
+using Stride.Engine;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.ComponentModel;
 
-namespace XenkoLiveEditor
+namespace StrideLiveEditor
 {
     public class EntityTreeItem : INotifyPropertyChanged
     {

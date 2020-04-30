@@ -1,8 +1,6 @@
-﻿<Project Sdk="MSBuild.Sdk.Extras/2.0.24">
+<Project Sdk="MSBuild.Sdk.Extras/2.0.24">
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
-    <RootNamespace>XenkoLiveEditor</RootNamespace>
-    <AssemblyName>XenkoLiveEditor</AssemblyName>
     <PackageId>$(AssemblyName)</PackageId>
     <Description>$(AssemblyName)</Description>
   </PropertyGroup>
@@ -37,6 +35,6 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Xenko.Engine" Version="3.2.0.1-vvvv-0894" />
+    <PackageReference Include="Stride.Engine" Version="4.0.0.1-vvvv-0908" />
   </ItemGroup>
 </Project>

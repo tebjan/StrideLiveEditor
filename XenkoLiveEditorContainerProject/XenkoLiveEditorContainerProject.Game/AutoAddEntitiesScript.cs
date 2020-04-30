@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XenkoLiveEditorContainerProject
+namespace StrideLiveEditorContainerProject
 {
     public class AutoAddEntitiesScript : AsyncScript
     {

@@ -1,5 +1,5 @@
-﻿using MahApps.Metro.Controls;
-using Xenko.Engine;
+using MahApps.Metro.Controls;
+using Stride.Engine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace XenkoLiveEditor.DataTypeEditors
+namespace StrideLiveEditor.DataTypeEditors
 {
     public abstract class BaseEditor : UserControl
     {

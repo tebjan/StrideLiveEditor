@@ -1,10 +1,10 @@
-﻿<Controls:MetroWindow x:Class="XenkoLiveEditor.LiveEditorMainWindow"
+﻿<Controls:MetroWindow x:Class="StrideLiveEditor.LiveEditorMainWindow"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:XenkoLiveEditor"
+             xmlns:local="clr-namespace:StrideLiveEditor"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" Width="800" Height="800">
     <Window.Resources>

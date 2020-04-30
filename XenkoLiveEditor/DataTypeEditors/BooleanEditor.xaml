@@ -1,10 +1,10 @@
-﻿<base:BaseEditor x:Class="XenkoLiveEditor.DataTypeEditors.BooleanEditor"
+﻿<base:BaseEditor x:Class="StrideLiveEditor.DataTypeEditors.BooleanEditor"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:XenkoLiveEditor.DataTypeEditors"
-             xmlns:base="clr-namespace:XenkoLiveEditor.DataTypeEditors"
+             xmlns:local="clr-namespace:StrideLiveEditor.DataTypeEditors"
+             xmlns:base="clr-namespace:StrideLiveEditor.DataTypeEditors"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>

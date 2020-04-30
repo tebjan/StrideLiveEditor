@@ -1,7 +1,7 @@
-using Xenko.Core.Mathematics;
+using Stride.Core.Mathematics;
 using Xenko.Engine;
 
-namespace XenkoLiveEditorContainerProject
+namespace StrideLiveEditorContainerProject
 {
     public class TestScript : SyncScript
     {

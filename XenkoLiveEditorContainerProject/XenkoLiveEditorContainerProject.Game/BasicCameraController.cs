@@ -1,10 +1,10 @@
 using System;
 using Xenko.Core;
-using Xenko.Core.Mathematics;
+using Stride.Core.Mathematics;
 using Xenko.Engine;
 using Xenko.Input;
 
-namespace XenkoLiveEditorContainerProject
+namespace StrideLiveEditorContainerProject
 {
     /// <summary>
     /// A script that allows to move and rotate an entity through keyboard, mouse and touch input to provide basic camera navigation.

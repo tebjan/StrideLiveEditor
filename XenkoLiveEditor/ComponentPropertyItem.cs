@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Reflection;
 using System.Text;
 
-namespace XenkoLiveEditor
+namespace StrideLiveEditor
 {
     public class ComponentPropertyItem
     {
-        public Xenko.Core.DataMemberAttribute DataMember { get; set; }
-        public Xenko.Core.DisplayAttribute Display { get; set; }
+        public Stride.Core.DataMemberAttribute DataMember { get; set; }
+        public Stride.Core.DisplayAttribute Display { get; set; }
         
         public FieldInfo FieldInfo { get; set; }
         public PropertyInfo PropertyInfo { get; set; }
@@ -78,8 +78,8 @@ namespace XenkoLiveEditor
             PropertyInfo = propertyInfo;
 
             var member = MemberInfo;
-            DataMember = member.GetCustomAttribute<Xenko.Core.DataMemberAttribute>();
-            Display = member.GetCustomAttribute<Xenko.Core.DisplayAttribute>();
+            DataMember = member.GetCustomAttribute<Stride.Core.DataMemberAttribute>();
+            Display = member.GetCustomAttribute<Stride.Core.DisplayAttribute>();
         }
 
         public ComponentPropertyItem(FieldInfo fieldInfo)

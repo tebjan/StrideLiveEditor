@@ -1,5 +1,5 @@
-﻿using MahApps.Metro.Controls;
-using Xenko.Engine;
+using MahApps.Metro.Controls;
+using Stride.Engine;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -12,7 +12,7 @@ using System.Windows.Documents;
 using System.Windows.Media;
 
 
-namespace XenkoLiveEditor
+namespace StrideLiveEditor
 {
     public partial class LiveEditorMainWindow : MetroWindow
     {
@@ -46,7 +46,7 @@ namespace XenkoLiveEditor
             Task.Factory.StartNew(UpdateNamesTicker);
         }
 
-        #region Setup Xenko Bindings
+        #region Setup Stride Bindings
 
         private async void GetSceneInstance()
         {
@@ -93,9 +93,9 @@ namespace XenkoLiveEditor
             });
         }
 
-        #endregion Setup Xenko Bindings
+        #endregion Setup Stride Bindings
 
-        #region Xenko Event Handlers
+        #region Stride Event Handlers
 
         private void SceneInstance_EntityAdded(object sender, Entity e)
         {
@@ -112,7 +112,7 @@ namespace XenkoLiveEditor
             Log("Scene changed");
         }
 
-        private void SceneInstance_ComponentChanged(object sender, Xenko.Engine.Design.EntityComponentEventArgs e)
+        private void SceneInstance_ComponentChanged(object sender, Stride.Engine.Design.EntityComponentEventArgs e)
         {
             if (selectedEntity == null || e.Entity != selectedEntity.Entity)
                 return;
@@ -146,7 +146,7 @@ namespace XenkoLiveEditor
 
         }
 
-        private void Children_CollectionChanged(object sender, Xenko.Core.Collections.TrackingCollectionChangedEventArgs e)
+        private void Children_CollectionChanged(object sender, Stride.Core.Collections.TrackingCollectionChangedEventArgs e)
         {
             switch (e.Action)
             {
@@ -174,7 +174,7 @@ namespace XenkoLiveEditor
                             foreach (var s in scene.Children)
                             {
                                 Children_CollectionChanged(null,
-                                    new Xenko.Core.Collections.TrackingCollectionChangedEventArgs(
+                                    new Stride.Core.Collections.TrackingCollectionChangedEventArgs(
                                     System.Collections.Specialized.NotifyCollectionChangedAction.Add, s, null, 0, false)
                                     );
                             }
@@ -206,7 +206,7 @@ namespace XenkoLiveEditor
             }
         }
 
-        #endregion Xenko Event Handlers
+        #endregion Stride Event Handlers
 
         #region UI Events
 
@@ -366,7 +366,7 @@ namespace XenkoLiveEditor
             foreach (var s in sceneInstance.RootScene.Children)
             {
                 Children_CollectionChanged(null,
-                    new Xenko.Core.Collections.TrackingCollectionChangedEventArgs(
+                    new Stride.Core.Collections.TrackingCollectionChangedEventArgs(
                     System.Collections.Specialized.NotifyCollectionChangedAction.Add, s, null, 0, false)
                     );
             }
@@ -451,11 +451,11 @@ namespace XenkoLiveEditor
                 return new DataTypeEditors.SingleEditor(component, property);
             else if (type == typeof(bool))
                 return new DataTypeEditors.BooleanEditor(component, property);
-            else if (type == typeof(Xenko.Core.Mathematics.Vector3))
+            else if (type == typeof(Stride.Core.Mathematics.Vector3))
                 return new DataTypeEditors.Vector3Editor(component, property);
-            else if (type == typeof(Xenko.Core.Mathematics.Vector2))
+            else if (type == typeof(Stride.Core.Mathematics.Vector2))
                 return new DataTypeEditors.Vector2Editor(component, property);
-            else if (type == typeof(Xenko.Core.Mathematics.Quaternion))
+            else if (type == typeof(Stride.Core.Mathematics.Quaternion))
             {
                 if (component.GetType().Name == "TransformComponent" && property.Name == "Rotation")
                     return new DataTypeEditors.RotationEditor(component, property);

@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using Xenko.Engine;
+using Stride.Engine;
 
-namespace XenkoLiveEditor
+namespace StrideLiveEditor
 {
     public class SceneItem
     {

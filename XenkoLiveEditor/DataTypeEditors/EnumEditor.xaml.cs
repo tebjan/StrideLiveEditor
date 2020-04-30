@@ -1,9 +1,9 @@
-﻿using Xenko.Engine;
+using Stride.Engine;
 using System;
 using System.Collections.Generic;
 using System.Windows.Controls;
 
-namespace XenkoLiveEditor.DataTypeEditors
+namespace StrideLiveEditor.DataTypeEditors
 {
     /// <summary>
     /// Interaction logic for EnumEditor.xaml

@@ -1,9 +1,9 @@
-﻿using Xenko.Core.Mathematics;
-using Xenko.Engine;
+using Stride.Core.Mathematics;
+using Stride.Engine;
 using System;
 using System.Windows.Controls;
 
-namespace XenkoLiveEditor.DataTypeEditors
+namespace StrideLiveEditor.DataTypeEditors
 {
     public partial class RotationEditor : BaseEditor
     {

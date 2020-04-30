@@ -1,7 +1,7 @@
-﻿using Xenko.Engine;
+using Stride.Engine;
 using System.Windows.Controls;
 
-namespace XenkoLiveEditor
+namespace StrideLiveEditor
 {
     /// <summary>
     /// Interaction logic for EntityComponentExpander.xaml

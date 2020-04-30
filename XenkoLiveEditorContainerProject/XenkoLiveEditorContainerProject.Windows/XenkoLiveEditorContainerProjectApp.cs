@@ -1,10 +1,10 @@
 using System;
 using Xenko.Engine;
-using XenkoLiveEditor;
+using StrideLiveEditor;
 
-namespace XenkoLiveEditorContainerProject
+namespace StrideLiveEditorContainerProject
 {
-    class XenkoLiveEditorContainerProjectApp
+    class StrideLiveEditorContainerProjectApp
     {
         [STAThread]
         static void Main(string[] args)
