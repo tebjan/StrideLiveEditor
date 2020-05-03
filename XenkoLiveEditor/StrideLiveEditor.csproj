@@ -1,8 +1,9 @@
-<Project Sdk="MSBuild.Sdk.Extras/2.0.24">
+﻿<Project Sdk="MSBuild.Sdk.Extras/2.0.24">
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
     <PackageId>$(AssemblyName)</PackageId>
     <Description>$(AssemblyName)</Description>
+    <StrideVersion Condition="'$(StrideVersion)' == ''">4.0.0.1-vvvv-0965</StrideVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>DEBUG;TRACE</DefineConstants>
@@ -31,6 +32,6 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Stride.Engine" Version="4.0.0.1-vvvv-0955" />
+    <PackageReference Include="Stride.Engine" Version="$(StrideVersion)" />
   </ItemGroup>
 </Project>
