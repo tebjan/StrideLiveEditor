@@ -58,7 +58,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\XenkoLiveEditor\XenkoLiveEditor.csproj" />
+    <ProjectReference Include="..\..\StrideLiveEditor\StrideLiveEditor.csproj" />
     <ProjectReference Include="..\XenkoLiveEditorContainerProject.Game\XenkoLiveEditorContainerProject.Game.csproj" />
   </ItemGroup>
 

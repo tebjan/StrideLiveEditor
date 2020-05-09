@@ -1,8 +1,8 @@
 using System;
-using Xenko.Core;
+using Stride.Core;
 using Stride.Core.Mathematics;
-using Xenko.Engine;
-using Xenko.Input;
+using Stride.Engine;
+using Stride.Input;
 
 namespace StrideLiveEditorContainerProject
 {
