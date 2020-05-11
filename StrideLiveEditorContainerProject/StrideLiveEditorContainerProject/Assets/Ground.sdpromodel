@@ -1,5 +1,5 @@
 !ProceduralModelAsset
-Id: 9a4ff75f-e001-443b-82d7-46cf7456adb2
+Id: 9d885bc9-a6aa-41cf-aa40-5e81d0279998
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
 Type: !PlaneProceduralModel
@@ -9,4 +9,4 @@ Type: !PlaneProceduralModel
     UvScale: {X: 1.0, Y: 1.0}
     LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
     MaterialInstance:
-        Material: 8e5ca19b-2848-4f54-9bae-8ebdc29c7dd8:Ground Material
+        Material: 627f9386-69da-4844-aff0-9b8074cdab29:Ground Material

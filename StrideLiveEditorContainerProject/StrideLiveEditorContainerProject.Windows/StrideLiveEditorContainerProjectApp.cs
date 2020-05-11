@@ -1,8 +1,8 @@
-using System;
 using Stride.Engine;
+using System;
 using StrideLiveEditor;
 
-namespace StrideLiveEditorContainerProject
+namespace StrideLiveEditorContainerProject.Windows
 {
     class StrideLiveEditorContainerProjectApp
     {

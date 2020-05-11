@@ -1,16 +1,16 @@
 !Package
 SerializedVersion: {Assets: 3.1.0.0}
 Meta:
-    Name: XenkoLiveEditorContainerProject.Game
+    Name: StrideLiveEditorContainerProject
     Version: 1.0.0
     Authors: []
     Owners: []
-    RootNamespace: XenkoLiveEditorContainerProject
     Dependencies: null
 AssetFolders:
-    -   Path: !dir ../Assets/Shared
+    -   Path: !dir Assets
     -   Path: !dir Effects
-ResourceFolders: []
+ResourceFolders:
+    - !dir Resources
 OutputGroupDirectories: {}
 ExplicitFolders: []
 Bundles: []
