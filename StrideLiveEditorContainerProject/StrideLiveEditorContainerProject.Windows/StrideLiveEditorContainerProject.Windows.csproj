@@ -1,27 +1,28 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFrameworks>net472;netcoreapp3.0</TargetFrameworks>
     <ApplicationIcon>Resources\Icon.ico</ApplicationIcon>
     <OutputType>WinExe</OutputType>
     <RootNamespace>StrideLiveEditorContainerProject.Windows</RootNamespace>
 
     <OutputPath>..\Bin\Windows\$(Configuration)\</OutputPath>
-    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <UseWPF>true</UseWPF>
 
     <!-- Force msbuild to check to rebuild this assembly instead of letting VS IDE guess -->
     <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\StrideLiveEditor\StrideLiveEditor.csproj" />
     <ProjectReference Include="..\StrideLiveEditorContainerProject\StrideLiveEditorContainerProject.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
-    <Reference Include="WindowsBase" />
+  <ItemGroup Condition="'$(TargetFramework)' == 'net472'">
+    <ProjectReference Include="..\..\StrideLiveEditor\StrideLiveEditor.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.0'">
+    <ProjectReference Include="..\..\StrideLiveEditor.Avalonia\StrideLiveEditor.Avalonia.csproj" />
   </ItemGroup>
 
 </Project>

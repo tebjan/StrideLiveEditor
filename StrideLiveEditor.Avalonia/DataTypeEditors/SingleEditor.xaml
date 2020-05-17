@@ -1,0 +1,16 @@
+﻿<local:BaseEditor xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:StrideLiveEditor.DataTypeEditors"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="StrideLiveEditor.Avalonia.DataTypeEditors.SingleEditor">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="1*" />
+      <ColumnDefinition Width="2*" />
+    </Grid.ColumnDefinitions>
+    <TextBlock x:Name="PropertyName" Text="" Grid.Column="0" VerticalAlignment="Center" />
+    <NumericUpDown x:Name="Value" Grid.Column="1" ParsingNumberStyle="Float" AllowSpin="True" Increment="0.1" Margin="0,5" />
+  </Grid>
+</local:BaseEditor>

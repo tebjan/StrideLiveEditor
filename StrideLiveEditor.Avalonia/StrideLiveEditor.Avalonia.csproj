@@ -1,0 +1,99 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="**\*.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <AvaloniaResource Include="**\*.xaml">
+      <SubType>Designer</SubType>
+    </AvaloniaResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Remove="DataTypeEditors\BooleanEditor.xaml" />
+    <AvaloniaResource Remove="DataTypeEditors\EnumEditor.xaml" />
+    <AvaloniaResource Remove="DataTypeEditors\Int32Editor.xaml" />
+    <AvaloniaResource Remove="DataTypeEditors\QuaternionEditor.xaml" />
+    <AvaloniaResource Remove="DataTypeEditors\RotationEditor.xaml" />
+    <AvaloniaResource Remove="DataTypeEditors\SingleEditor.xaml" />
+    <AvaloniaResource Remove="DataTypeEditors\UnsupportedEditor.xaml" />
+    <AvaloniaResource Remove="DataTypeEditors\Vector2Editor.xaml" />
+    <AvaloniaResource Remove="DataTypeEditors\Vector3Editor.xaml" />
+    <AvaloniaResource Remove="EntityComponentExpander.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="DataTypeEditors\BooleanEditor.xaml" />
+    <None Remove="DataTypeEditors\EnumEditor.xaml" />
+    <None Remove="DataTypeEditors\Int32Editor.xaml" />
+    <None Remove="DataTypeEditors\QuaternionEditor.xaml" />
+    <None Remove="DataTypeEditors\RotationEditor.xaml" />
+    <None Remove="DataTypeEditors\SingleEditor.xaml" />
+    <None Remove="DataTypeEditors\UnsupportedEditor.xaml" />
+    <None Remove="DataTypeEditors\Vector2Editor.xaml" />
+    <None Remove="DataTypeEditors\Vector3Editor.xaml" />
+    <None Remove="EntityComponentExpander.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.9.10" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.9.10" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.9.10" />
+    <PackageReference Include="Stride.Engine" Version="4.0.0.1-beta02-0926" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataTypeEditors\BooleanEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EntityComponentExpander.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataTypeEditors\UnsupportedEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataTypeEditors\Vector3Editor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataTypeEditors\RotationEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataTypeEditors\EnumEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataTypeEditors\Int32Editor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataTypeEditors\SingleEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataTypeEditors\Vector2Editor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataTypeEditors\QuaternionEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="LivedEditorMainWindow.xaml.cs">
+      <DependentUpon>LivedEditorMainWindow.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>
