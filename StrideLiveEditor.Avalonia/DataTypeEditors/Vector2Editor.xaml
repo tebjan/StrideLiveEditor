@@ -19,9 +19,9 @@
         <ColumnDefinition Width="*" />
       </Grid.ColumnDefinitions>
       <TextBlock Text="X:" VerticalAlignment="Center" Grid.Column="0"/>
-      <NumericUpDown x:Name="X" Grid.Column="1" ParsingNumberStyle="Float" Increment="0.1" AllowSpin="True" Margin="5" />
+      <NumericUpDown x:Name="X" Grid.Column="1" ParsingNumberStyle="Float" FormatString="0.####" Increment="0.1" AllowSpin="True" Margin="5" />
       <TextBlock Text="Y:" VerticalAlignment="Center" Grid.Column="2"/>
-      <NumericUpDown x:Name="Y" Grid.Column="3" ParsingNumberStyle="Float" Increment="0.1" AllowSpin="True" Margin="5" />
+      <NumericUpDown x:Name="Y" Grid.Column="3" ParsingNumberStyle="Float" FormatString="0.####" Increment="0.1" AllowSpin="True" Margin="5" />
     </Grid>
   </Grid>
 </local:BaseEditor>
