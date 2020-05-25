@@ -5,7 +5,7 @@
     <AssemblyName>StrideLiveEditor</AssemblyName>
     <PackageId>$(AssemblyName)</PackageId>
     <Description>$(AssemblyName)</Description>
-    <StrideVersion Condition="'$(StrideVersion)' == ''">4.0.0.1-vvvv-1065</StrideVersion>
+    <StrideVersion Condition="'$(StrideVersion)' == ''">4.0.0.1-vvvv-1066</StrideVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>DEBUG;TRACE</DefineConstants>
