@@ -46,7 +46,7 @@ namespace StrideLiveEditor
             Task.Factory.StartNew(UpdateNamesTicker);
         }
 
-        #region Setup Xenko Bindings
+        #region Setup Stride Bindings
 
         private async void GetSceneInstance()
         {
@@ -93,9 +93,9 @@ namespace StrideLiveEditor
             });
         }
 
-        #endregion Setup Xenko Bindings
+        #endregion Setup Stride Bindings
 
-        #region Xenko Event Handlers
+        #region Stride Event Handlers
 
         private void SceneInstance_EntityAdded(object sender, Entity e)
         {
@@ -206,7 +206,7 @@ namespace StrideLiveEditor
             }
         }
 
-        #endregion Xenko Event Handlers
+        #endregion Stride Event Handlers
 
         #region UI Events
 
