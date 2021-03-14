@@ -1,4 +1,4 @@
-# XenkoLiveEditor
-Live entity editing for Xenko games.
+# StrideLiveEditor
+Live entity editing for Stride games.
 
-![Screenshot](https://raw.githubusercontent.com/tebjan/XenkoLiveEditor/master/Screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/tebjan/StrideLiveEditor/master/Screenshot.png)
