@@ -1,0 +1,35 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:local="clr-namespace:StrideLiveEditor"
+        x:Class="StrideLiveEditor.Avalonia.LiveEditorMainWindow"
+        Title="StrideLiveEditor.Avalonia">
+   <Grid x:Name="RootGrid">
+        <TextBlock Name="label" Text="Entities" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TreeView x:Name="entityTreeView" Margin="10,41,0,149" Items="{Binding Entities}" HorizontalAlignment="Left" Width="250" SelectionChanged="entityTreeView_SelectedItemChanged">
+            <TreeView.DataTemplates>
+              <TreeDataTemplate DataType="{x:Type local:EntityTreeItem}" ItemsSource="{Binding Children}">
+                    <TextBlock Text="{Binding Path=Name}" />
+                </TreeDataTemplate >
+            </TreeView.DataTemplates>
+        </TreeView>
+
+        <TextBlock Name="label2" Text="Components" Margin="265,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="78"/>
+        <Grid Margin="265,41,10,149">
+            <Border BorderBrush="Gray" BorderThickness="1">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel x:Name="componentGridList">
+
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+        </Grid>
+
+        <TextBlock Name="label1" Text="Log" Margin="10,0,0,123" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="30"/>
+        <ScrollViewer Name="logScrollViewer" Margin="10,0,10,10" Height="108" VerticalAlignment="Bottom">
+            <TextBlock Name="txtLog" TextWrapping="Wrap" Text="" Foreground="Gray" />
+        </ScrollViewer>
+    </Grid>
+</Window>
